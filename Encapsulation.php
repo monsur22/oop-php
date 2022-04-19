@@ -1,17 +1,33 @@
 <?php
+class Student {
+    private $firstname;
+    private $gender;
 
-class Class1
-{
-    function __construct()
-    {
-        $this -> name = "John";
-        echo "Class1 constructor called";
+    public function getFirstName() {
+        return $this->firstname;
     }
 
-    function fun1()
-    {
-        echo "Class1 fun1 called";
+    public function setFirstName($firstname) {
+        $this->firstname = $firstname;
+        echo("First name is set to ".$firstname);
+        echo("<br>");
+    }
+
+    public function getGender() {
+        return $this->gender;
+    }
+
+    public function setGender($gender) {
+        if ('Male' !== $gender and 'Female' !== $gender) {
+            echo('Set gender as Male or Female for gender');
+        }
+
+        $this->gender = $gender;
+        echo("Gender is set to ".$gender);
+        echo("<br>");
     }
 }
-echo $obj->name;
-?>
+
+$student = new Student();
+$student->setFirstName('Meena');
+$student->setGender('Female');
