@@ -26,8 +26,26 @@ class Student {
         echo("Gender is set to ".$gender);
         echo("<br>");
     }
+
 }
 
 $student = new Student();
 $student->setFirstName('Meena');
 $student->setGender('Female');
+
+//2nd example
+class ATM {
+    private $custid;
+    private $atmpin;
+    public function PinChange($custid,$atmpin) {
+             ---------perform tasks-----
+             }
+    public function CheckBalance($custid,$atmpin){
+             ---------perform tasks-----
+             }
+    public function miniStatement($custid) {
+             ---------perform tasks-----
+             }
+    }
+ $obj = new ATM();
+ $obj ->CheckBalance(10005285637,1**3);
